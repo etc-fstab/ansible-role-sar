@@ -1,0 +1,6 @@
+---
+- name: Test sar role
+  hosts: test
+  roles:
+    - role: ../../ansible-role-sar
+...

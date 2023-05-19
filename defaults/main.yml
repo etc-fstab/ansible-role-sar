@@ -1,0 +1,18 @@
+---
+
+# Default for sar configuraiton is YES.
+#
+# You may have use case for NO, for some host or host-group.
+# This can be defined in files:
+# vars/{{ inventory_hostname }}.yml
+# vars/{{ host_group }}.yml
+
+# Supported values:
+# For positive: [Yy][Ee][Ss], Y, y
+# For negative: [Nn][Oo], N, n
+
+sar_cfg: "yes"
+
+# Just declare this var.
+host_group: ""
+...

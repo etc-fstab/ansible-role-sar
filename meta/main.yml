@@ -1,0 +1,41 @@
+galaxy_info:
+  role_name: ansible_role_sar
+  namespace: etc_fstab
+  author: zd
+  description: Management of SAR (System Activity Report) for Linux and Solaris
+
+  license: "Public Domain"
+
+  min_ansible_version: 2.10.7
+
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: OracleLinux
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Solaris
+      versions:
+        - all
+
+  galaxy_tags:
+    - system
+    - monitoring
+    - performance
+    - sysstat
+    - accounting
+    - tools
+    - linux
+    - solaris
+
+dependencies: []

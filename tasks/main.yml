@@ -1,0 +1,24 @@
+---
+- name: Gather facts
+  ansible.builtin.setup:
+    gather_subset:
+      - 'min'
+
+- name: Load dymanic sar variable yml file
+  # look for specific order: host, host-group, os-family
+  ansible.builtin.include_vars: "{{ item }}"
+  with_first_found:
+    - "vars/{{ inventory_hostname }}.yml"
+    - "vars/{{ host_group }}.yml"
+    - "vars/{{ ansible_os_family }}.yml"
+
+- name: Manage SAR
+  when:
+    sar_cfg is regex('^([Yy]{1})(([Ee][Ss]){0,1})$')
+  ansible.builtin.import_tasks: sar-yes.yml
+
+- name: Don't manage SAR
+  when:
+    sar_cfg is regex('^([Nn]{1})([Oo]{0,1})$')
+  ansible.builtin.import_tasks: sar-no.yml
+...

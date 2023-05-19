@@ -1,0 +1,5 @@
+---
+- name: SAR is not managed on {{ inventory_hostname }}
+  ansible.builtin.debug:
+    msg: "SAR is not managed on {{ inventory_hostname }}"
+...
