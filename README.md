@@ -20,7 +20,7 @@ Role Variables
 
 1. Default vars:
 
-```sar_cfg```, ```host_group```
+```sar_cfg```, ```hostgroup```
 
 2. Host, hostgroup, os_family based vars:
 
@@ -50,8 +50,8 @@ Maintenance and support
 
 2. For hostname, use Ansible var {{ inventory_hostname }}
 
-3. If you have host/host-group based sar config, review files vars/inventory_hostname_example.yml and 
-   vars/hostgroup_name_example.yml, and create something like that for your hosts. 
+3. If you have host/host-group based sar config, review files vars/hostname=example.yml and 
+   vars/hostgroup=example.yml, and create something like that for your hosts. 
 ```
 
 Author Information

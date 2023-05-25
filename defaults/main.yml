@@ -14,5 +14,5 @@
 sar_cfg: "yes"
 
 # Just declare this var.
-host_group: ""
+hostgroup: ""
 ...
